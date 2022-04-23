@@ -1,4 +1,5 @@
 import React from 'react';
+import { Btntheme } from '../components/theme';
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
           more.
         </p>
       </div>
-      <div></div>
+      <div>
+        <Btntheme />
+      </div>
     </div>
   );
 }

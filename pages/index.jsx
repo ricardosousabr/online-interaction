@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Btntheme } from '../components/theme';
 
 export default function Home() {
+  const [color, setColor] = useState(false);
+
   return (
-    <div id="">
+    <div>
       <div>
-        <h1>Online interaction</h1>
+        <h1 className={`${color ? 'color' : ''}`}>Online interaction</h1>
       </div>
       <div>
-        <p>
+        <p className={`${color ? 'color' : ''}`}>
           Welcome, here you will learn how to interact online with other people
           but if you already interact online we will help you to improve even
           more.
         </p>
       </div>
       <div>
-        <Btntheme />
+        <button onClick={() => setColor(!color)}>Change color</button>
       </div>
     </div>
   );

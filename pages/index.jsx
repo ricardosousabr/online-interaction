@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Btntheme } from '../components/theme';
 
 export default function Home() {
@@ -18,6 +19,11 @@ export default function Home() {
       </div>
       <div>
         <button onClick={() => setColor(!color)}>Change color</button>
+      </div>
+      <div>
+        <Link href="/indroduction">
+          <a>Next</a>
+        </Link>
       </div>
     </div>
   );

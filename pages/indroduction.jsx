@@ -3,6 +3,19 @@ import { Btntheme } from '../components/theme';
 
 export default function Indroduction() {
   const [color, setColor] = useState(false);
+  const [value, setValue] = useState(false);
+
+  function changerValue() {
+    return new Promise((resolve) => {
+      setValue(true);
+    });
+  }
+
+  async function test() {
+    await changerValue();
+    console.log(value);
+  }
+  console.log(value);
 
   return (
     <>
@@ -29,7 +42,9 @@ export default function Indroduction() {
           minus 33 pariatur tempora.
         </p>
       </div>
-      <div></div>
+      <div>
+        <button onClick={changerValue}>Changer value</button>
+      </div>
     </>
   );
 }
